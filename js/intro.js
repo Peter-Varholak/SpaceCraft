@@ -25,10 +25,6 @@ function resolveIntroScreen(button)
     {
         setupGame();
     }
-    else
-    {
-        alert("You messed it up.");
-    }
 }
 
 function newGame()
@@ -48,7 +44,7 @@ function overwriteGame()
 {
     if(confirm("Overwrite saved game?"))
     {
-        saveGame();
+        localStorage.setItem("spacecraftSave", false);
         newGame();
     }  
 }  
