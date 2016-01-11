@@ -1,0 +1,139 @@
+#game {
+	height: 100%;
+    width: 100%;
+    z-index: 99;
+    display: none;
+}
+
+#log {
+	float: right;
+	border: solid black 4px;
+    border: solid black 0.3vw;
+	position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  	height: 75%;
+  	width: 20%;
+  	margin: 5% 2% 2% 0%;
+  	text-align: center;
+}
+
+#logHeader {
+    font-family: Arial;
+    font-size: 30px; 
+    font-size: 2vw;
+    padding: 2% 5% 1% 5%;
+    text-align: left;
+}
+
+#logLine {
+    height: 2px;
+    height: 0.1vw;
+    width: 90%;
+    margin-top: 0%;
+    margin-bottom: 2%;
+    background: #404040;
+    border: solid #404040 0px;
+    border: solid #404040 0vw;
+}
+
+#messages {
+    margin-left: 8%;
+    width: 82%;
+    height: 90%;
+    text-align: left;   
+}
+
+#logGradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(transparent, white);
+}
+
+.message {
+    margin-bottom: 1.5%;
+}
+
+.messageTime {
+    margin-left: 4%;
+}
+
+.messageText {
+    font-size: 16px;
+    font-size: 1vw;
+    font-family: "Times New Roman", Georgia, Serif;
+}
+
+#window {
+    float: left;
+    border: solid black 4px;
+    border: solid black 0.3vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 65%;
+    width: 70%;
+    margin: 0 auto;
+    margin-left: 2%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    text-align: center;
+}
+
+#tabButtons {
+    float: left;
+    position: absolute;
+    top: 70%;
+    left: 0;
+    bottom: 0;
+    height: 15%;
+    width: 70%;
+    margin: 0 auto;
+    margin-left: 2%;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    text-align: left;
+}
+
+.tabButton {
+    cursor: pointer;
+    position: relative;
+    width: 16%;
+    background: white;
+    background-image: -webkit-linear-gradient(top, white, #e3e3e3);
+    background-image: -moz-linear-gradient(top, white, #e3e3e3);
+    background-image: -ms-linear-gradient(top, white, #e3e3e3);
+    background-image: -o-linear-gradient(top, white, #e3e3e3);
+    background-image: linear-gradient(to bottom, white, #e3e3e3);
+    font-family: Arial;
+    color: black;
+    font-size: 25px;
+    font-size: 1.5vw;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin: 0.5% 1.5% 1.5% 1.5%;
+    border: solid black 2px;
+    border: solid black 0.2vw;
+}
+
+.tabButton:hover {
+    background: #e3e3e3;
+    background-image: -webkit-linear-gradient(top, #e3e3e3, white);
+    background-image: -moz-linear-gradient(top, #e3e3e3, white);
+    background-image: -ms-linear-gradient(top, #e3e3e3, white);
+    background-image: -o-linear-gradient(top, #e3e3e3, white);
+    background-image: linear-gradient(to bottom, #e3e3e3, white);
+}
+
+.tabButton:active {
+    background: #e3e3e3;
+}
+
+.disabledButton {
+    display: none;
+}

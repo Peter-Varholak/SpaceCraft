@@ -1,0 +1,61 @@
+#factionList {
+    float: left;
+    width: 96%;
+    margin: 0;
+    padding: 2% 2% 2% 2%;
+    list-style: none;
+    text-align: center;
+    font-size: 16px;
+    font-size: 0.9vw;
+}
+
+.factionListItem {
+    float: left;
+    width: 40%;
+    margin: 2% 4% 0% 4%;
+    padding: 0%;
+    border: solid black 2px;
+    border: solid black 0.2vw;
+}
+
+.factionListName {
+    float: left;
+    width: 35%;
+    margin: 2% 2% 2% 2%;
+}
+
+.progressBar {
+    float: left;
+    background: #e3e3e3;
+    height: 1vw;
+    width: 55%;
+    margin-top: 1.7%;
+    padding: 3px;
+    border: solid black 1px;
+    border: solid black 0.1vw;
+}
+
+.progressBar::-webkit-progress-bar {
+    background: #e3e3e3;
+}
+.progressBar::-webkit-progress-value {
+}
+.progressBar::-moz-progress-bar {   
+}
+
+.progressBarPositive::-webkit-progress-value {
+    background: #000033;
+}
+.progressBarPositive::-moz-progress-bar {
+    background: #000033;
+}
+.progressBarNegative::-webkit-progress-value {
+    background: #880000;
+}
+.progressBarNegative::-moz-progress-bar {
+    background: #880000;
+}
+
+.locked {
+    display: none;
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>SpaceCraft</title>
+	<meta charset="UTF-8">
+	<link rel="icon" type="image/png" href="img/pageIcon.png" sizes="16x16" />
+	<link rel="stylesheet" type="text/css" href="css/communicationTab.css">
+	<link rel="stylesheet" type="text/css" href="css/factionTab.css">
+	<link rel="stylesheet" type="text/css" href="css/game.css">
+	<link rel="stylesheet" type="text/css" href="css/intro.css">
+	<link rel="stylesheet" type="text/css" href="css/placesTab.css">	
+	<link rel="stylesheet" type="text/css" href="css/settings.css">
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/MooTools-Core-1.5.2.js"></script>
+	<script src="js/actions.js"></script>
+	<script src="js/buttons.js"></script>
+	<script src="js/combatActions.js"></script>
+	<script src="js/factions.js"></script>
+	<script src="js/game.js"></script>
+	<script src="js/generalEvents.js"></script>
+	<script src="js/intro.js"></script>	
+	<script src="js/saveSystem.js"></script>
+	<script src="js/settings.js"></script>
+	<script src="js/specificEvents.js"></script>
+</head>
+<body>
+	<audio id="musicPlayer" loop>
+	    <source src="sound/main.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="soundPlayer">
+	    <source src="sound/beep.mp3" type="audio/mpeg">
+	</audio> 
+	<div id="wrapper">
+		<div id="timer" class="topUI beforeChange"></div>
+		<div id="intro">
+			<div id="buttons">
+				<input class="button clickableIntro" type="button" id="topButton" value="CONTINUE">
+				<br>
+				<input class="button clickableIntro" type="button" id="botButton" value="NEW GAME">
+			</div>
+		</div>
+		<div id="uiButtons" class="beforeChange">
+			<img src="img/sound.svg" alt="Sound" id="soundButton" class="uiButton" onClick="toggleSound()">
+			<img src="img/music.svg" alt="Music" id="musicButton" class="uiButton" onClick="toggleMusic()">
+			<!-- Add Info button -->
+		</div>
+		<div id="game">
+			<div id="log">
+				<div id="logHeader">Captain's Log</div>
+				<hr id="logLine"></hr>
+				<div id="logGradient"></div>
+				<div id="messages">
+
+				</div>
+			</div>
+			<div id="location" class="topUI">The Void</div>
+			<div id="window">
+				<div id="placesTab" class="disabledTab">
+					<ul id="placesList">
+						<li class="placesListLocation" onClick="alert('hola')">Europa</li>
+						<li class="placesListLocation">Sig</li>
+						<li class="placesListLocation">SOL 3</li>
+						<li class="placesListLocation">Void</li>
+						<li class="placesListLocation">Dark Void</li>
+						<li class="placesListLocation" onClick="alert('hola')">Europa</li>
+						<li class="placesListLocation">Sig</li>
+						<li class="placesListLocation">SOL 3</li>
+						<li class="placesListLocation">Void</li>
+						<li class="placesListLocation">Dark Void</li>
+					</ul>
+				</div>
+				<div id="communicationTab" class="disabledTab enabledTab">
+					<div id="playerStats" class="statWindow">
+						<div id="playerHealth" class="statText">Health:</div>
+						<div id="playerHealthValue" class="statTextValue">0/0</div><br><br>
+						<div id="playerShield" class="statText">Shields:</div>
+						<div id="playerShieldValue" class="statTextValue">0/0</div><br><br>
+						<div id="playerFame" class="statText">Fame:</div>
+						<div id="playerFameValue" class="statTextValue">0</div><br><br>
+						<div id="playerGold" class="statText">Gold:</div>
+						<div id="playerGoldValue" class="statTextValue">150</div><br><br>
+					</div>
+					<div id="enemyStats" class="statWindow disabledStatWindow">
+						<img src="img/something.svg" id="enemyImage">
+						<div id="enemyHealth" class="statText">Health:</div>
+						<div id="enemyHealthValue" class="statTextValue">5/5</div><br><br>
+						<div id="enemyShield" class="statText">Shields:</div>
+						<div id="enemyShieldValue" class="statTextValue">0/0</div><br><br>
+						<!--<div id="enemyFame" class="statText">Fame:</div>
+						<div id="enemyFameValue" class="statTextValue">0</div><br><br>
+						<div id="enemyGold" class="statText">Gold:</div>
+						<div id="enemyGoldValue" class="statTextValue">150</div><br><br>-->
+					</div>
+					<div id="communicationText">
+						Tutorial not yet implemented.
+					</div>
+				</div>
+				<div id="datalogTab" class="disabledTab">
+					<ul id="factionList"> <!-- TODO: on hoover show value-->
+						<li id="factionItem1" class="factionListItem locked">
+							<div class="factionListItemWrapper">
+								<div class="factionListName" id="factionName1">Darksteel Corsairs:</div>
+								<progress max="100" value="80" class="progressBar" id="factionProgress1"></progress>
+
+							</div>
+						</li>
+						<li id="factionItem2" class="factionListItem locked">
+							<div class="factionListItemWrapper">
+								<div class="factionListName" id="factionName2">The Order:</div>
+								<progress max="100" value="80" class="progressBar" id="factionProgress2"></progress>
+							</div>
+						</li>
+						<li id="factionItem3" class="factionListItem locked">
+							<div class="factionListItemWrapper">
+								<div class="factionListName" id="factionName3">The Council:</div>
+								<progress max="100" value="80" class="progressBar" id="factionProgress3"></progress>
+							</div>
+						</li>
+						<li id="factionItem4" class="factionListItem locked">
+							<div class="factionListItemWrapper">
+								<div class="factionListName" id="factionName4">The Peacekeepers:</div>
+								<progress max="100" value="80" class="progressBar" id="factionProgress4"></progress>
+							</div>
+						</li>
+						<li id="factionItem5" class="factionListItem locked">
+							<div class="factionListItemWrapper">
+								<div class="factionListName" id="factionName5">Test5:</div>
+								<progress max="100" value="80" class="progressBar" id="factionProgress5"></progress>
+							</div>
+						</li>
+						<li id="factionItem6" class="factionListItem locked">
+							<div class="factionListItemWrapper">
+								<div class="factionListName" id="factionName6">Test6:</div>
+								<progress max="100" value="80" class="progressBar" id="factionProgress6"></progress>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div id="inventoryTab" class="disabledTab">
+					COMING SOON!
+				</div>
+				<div id="incomeTab" class="disabledTab">
+					COMING SOON!
+				</div>
+				<div id="scienceTab" class="disabledTab">
+					COMING SOON!
+				</div>
+				<div id="biolabTab" class="disabledTab">
+					COMING SOON!
+				</div>
+				<div id="shipTab" class="disabledTab">
+					COMING SOON!
+				</div>
+				<div id="crewTab" class="disabledTab">
+					COMING SOON!
+				</div>
+			</div>
+			<div id="tabButtons">
+				<input type="button" value="Explore" class="tabButton" id="tab01">
+				<input type="button" value="Places" class="tabButton" id="tab02">
+				<input type="button" value="Communication" class="tabButton" id="tab03">
+				<input type="button" value="Datalog" class="tabButton" id="tab05">
+				<input type="button" value="Inventory" class="tabButton" id="tab04">
+				<br>
+				<input type="button" value="Income" class="tabButton" id="tab06">
+				<input type="button" value="Science" class="tabButton" id="tab07">
+				<input type="button" value="Biolab" class="tabButton" id="tab08">
+				<input type="button" value="Ship" class="tabButton" id="tab09">
+				<input type="button" value="Crew" class="tabButton" id="tab10">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

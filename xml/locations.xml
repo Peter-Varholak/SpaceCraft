@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<locations>
+	<pirate amount="12">
+		<piratelocation id="1">Europa Sector</piratelocation>
+		<piratelocation id="2">Sig</piratelocation>
+		<piratelocation id="3">SOL</piratelocation>
+		<piratelocation id="4">Bode Sector</piratelocation>
+		<piratelocation id="5">Hoag Sector</piratelocation>
+		<piratelocation id="6">Centaurus</piratelocation>
+		<piratelocation id="7">Aries Sector</piratelocation>
+		<piratelocation id="8">Taurus Sector</piratelocation>
+		<piratelocation id="9">Gemini Sector</piratelocation>
+		<piratelocation id="10">Sagittarius Sector</piratelocation>
+		<piratelocation id="11">Antares</piratelocation>
+		<piratelocation id="12">Hamal Sector</piratelocation>
+		<piratelocation id="13">Majora Sector</piratelocation>
+	</pirate>
+</locations>

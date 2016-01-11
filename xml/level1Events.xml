@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<events amount="2">
+	<event id="1">
+		<type>combat</type>
+		<location>pirate</location>
+		<factions amount="2">
+			<faction id="1" value="-1" condition="kill">darksteel corsairs</faction>
+			<faction id="2" value="1" condition="kill">peacekeepers</faction>
+		</factions>
+		<log>Pirate ship discovered</log>
+		<intromessage><i>Computer: </i>Captain, our radars spotted an enemy pirate ship, what are your orders?</intromessage>
+		<message><i>Pirate ship: </i>You have met your doom now captain, surrender or blablabla.</message>
+		<negotiation1><i>Pirate ship: </i>You can haggle for your life all you want.</negotiation1>
+		<negotiation2><i>Pirate ship: </i>This seems like a really uneven fight.</negotiation2>
+		<negotiation3><i>Pirate ship: </i>Maybe we can let you go, you probably don't have anything valuable anyways.</negotiation3>
+		<diplomacyoutromessage><i>Pirate ship: </i>Very well, we will leave you alone this time.</diplomacyoutromessage>
+		<killoutromessage><i>Computer: </i>Great job Captain, you showed them who is the boss.</killoutromessage>
+		<escapeoutromessage><i>Computer: </i>Good job Captain, we managed to avoid conflict.</escapeoutromessage>
+		<escapefailoutromessage><i>Computer: </i>It looks like the spotted us, we need to fight.</escapefailoutromessage>
+		<fleeoutromessage><i>Computer: </i>Looks like you outmaneuvered those pirates Captain.</fleeoutromessage>
+		<fleefailoutromessage><i>Pirate ship: </i>Hah, you won't escape us that easily.</fleefailoutromessage>
+		<escapechance>50</escapechance>
+		<enemyhp>3</enemyhp>
+		<enemyshield>0</enemyshield>
+		<enemyfactionhealth>50</enemyfactionhealth>
+		<enemymaxgold>50</enemymaxgold>
+	</event>
+	<event id="2">
+		<type>combat</type>
+		<location>pirate</location>
+		<factions amount="1">
+			<faction id="1" value="-1" condition="kill">order</faction>
+		</factions>
+		<log>Automated drone discovered.</log>
+		<intromessage><i>Computer: </i>Captain, our radars spotted an automated drone, what are your orders?</intromessage>
+		<message>Beep Boop, you are not part of The Order, prepare to be destroyed.</message>
+		<negotiation1><i>Computer: </i>Captain, you can't negotiate with a drone.</negotiation1>
+		<negotiation2><i>Computer: </i>Captain, we appreciate your pacifism but this drone won't listen to your reasoning.</negotiation2>
+		<negotiation3><i>Computer: </i>Captain, you were talking to a drone for 2 hours already, maybe it's time to try a different tactic.</negotiation3>
+		<diplomacyoutromessage><i>Drone: </i>Beep boop, life form evaluated as primitive, continue patrol sequence ALPHA.<br/><i>Computer: </i>>Well, I am not sure how you managed that but you talked a drone into leaving us alone Captain.</diplomacyoutromessage>
+		<killoutromessage>We managed to salvage some resources from the drone.</killoutromessage>
+		<escapeoutromessage><i>Computer: </i>Seems he didn't notice us Captain.</escapeoutromessage>
+		<escapefailoutromessage><i>Drone: </i>Alert, alert, unknown ship in proximity.</escapefailoutromessage>
+		<fleeoutromessage><i>Drone: </i>Beep boop, vehicle left proximity of AE-459 engage patrol sequence GAMMA.</fleeoutromessage>
+		<fleefailoutromessage><i>Drone: </i>Beep boop, exterminate threat to The Order.</fleefailoutromessage>
+		<escapechance>80</escapechance>	
+		<enemyhp>1</enemyhp>
+		<enemyshield>3</enemyshield>
+		<enemyfactionhealth>1000</enemyfactionhealth>
+		<enemymaxgold>20</enemymaxgold>
+	</event>
+</events>
