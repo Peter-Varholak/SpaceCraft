@@ -9,12 +9,12 @@ function setupCombat(eventTag)
 
 	enemyStats.maxMoney = eventTag.find('enemymaxgold').get(0).innerHTML;
 	enemyStats.maxEnemyHp = eventTag.find('enemyhp').get(0).innerHTML;
-	enemyStats.maxfactionHealth = eventTag.find('enemyfactionhealth').get(0).innerHTML;
+	enemyStats.maxDiplomacyHealth = eventTag.find('enemydiplomacyhealth').get(0).innerHTML;
 	enemyStats.maxEnemyShields = eventTag.find('enemyshield').get(0).innerHTML;
 
 	enemyHeal(enemyStats.maxEnemyHp);
 	enemyStats.currentEnemyShields = enemyStats.maxEnemyShields; //TODO: make into function in actions
-	enemyStats.factionHealth = enemyStats.maxfactionHealth; //TODO: make into function in actions
+	enemyStats.diplomacyHealth = enemyStats.maxDiplomacyHealth; //TODO: make into function in actions
 	
 	updateAll();
 }
@@ -112,7 +112,7 @@ function killVictory(eventTag)
 function diplomacyVictory(eventTag)
 {
 	stats.diplomacyVictory++;
-	outroMessage = eventTag.find('factionoutromessage').get(0).innerHTML;
+	outroMessage = eventTag.find('diplomacyoutromessage').get(0).innerHTML;
 
 	var fameValue = eventTag.find('famevalue').get(0).innerHTML;
 	var maxFame = eventTag.find('maxFame').get(0).innerHTML;

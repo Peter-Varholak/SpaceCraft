@@ -22,8 +22,10 @@
 		<escapechance>50</escapechance>
 		<enemyhp>3</enemyhp>
 		<enemyshield>0</enemyshield>
-		<enemyfactionhealth>50</enemyfactionhealth>
+		<enemydiplomacyhealth>50</enemydiplomacyhealth>
 		<enemymaxgold>50</enemymaxgold>
+		<famevalue>1</famevalue>
+		<maxFame>20</maxFame>
 	</event>
 	<event id="2">
 		<type>combat</type>
@@ -46,7 +48,9 @@
 		<escapechance>80</escapechance>	
 		<enemyhp>1</enemyhp>
 		<enemyshield>3</enemyshield>
-		<enemyfactionhealth>1000</enemyfactionhealth>
+		<enemydiplomacyhealth>1000</enemydiplomacyhealth>
 		<enemymaxgold>20</enemymaxgold>
+		<famevalue>1</famevalue>
+		<maxFame>20</maxFame>
 	</event>
 </events>

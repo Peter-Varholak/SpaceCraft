@@ -71,13 +71,13 @@ function negotiate(negotiate)
 
     amount += parseInt(negotiate);
 
-    enemyStats.factionHealth -= parseInt(amount);
+    enemyStats.diplomacyHealth -= parseInt(amount);
 
     var message;    
     
     if (enemyStats.diplomacyHealth <= 0)
     {
-        eventEnd("diplomacy");
+        eventEnd("combat", "diplomacy");
     }
     else if(enemyStats.diplomacyHealth < enemyStats.maxDiplomacyHealth * 0.33)
     {

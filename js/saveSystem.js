@@ -119,11 +119,11 @@ function loadGame()
 function loadXMLs()
 {
     // WEB
-    xmls.level1Events = getXML("../xml/level1Events.xml");
-    xmls.locations = getXML("../xml/locations.xml");
+    //xmls.level1Events = getXML("../xml/level1Events.xml");
+    //xmls.locations = getXML("../xml/locations.xml");
     // LOCAL
-    //xmls.level1Events = getXML("file:///D:/Work/Html/Zadanie/xml/level1Events.xml"); 
-    //xmls.locations = getXML("file:///D:/Work/Html/Zadanie/xml/locations.xml");
+    xmls.level1Events = getXML("file:///D:/Work/Html/SpaceCraft/xml/level1Events.xml"); 
+    xmls.locations = getXML("file:///D:/Work/Html/SpaceCraft/xml/locations.xml");
 
     function getXML(name)
     {
