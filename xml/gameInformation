@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<information>
+    <maxlevel>1</maxlevel>
+    <currencyname>Rupee</currencyname>
+    <factionnames amount="4">
+        <faction id="0">Darksteel Corsairs</faction>
+        <faction id="1">The Order</faction>
+        <faction id="2">The Council</faction>
+        <faction id="3">The Peacekeepers</faction>
+    </factionnames>
+</information>

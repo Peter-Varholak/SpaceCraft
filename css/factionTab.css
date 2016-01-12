@@ -38,21 +38,11 @@
 .progressBar::-webkit-progress-bar {
     background: #e3e3e3;
 }
-.progressBar::-webkit-progress-value {
-}
-.progressBar::-moz-progress-bar {   
-}
 
-.progressBarPositive::-webkit-progress-value {
+.progressBarPositive::-webkit-progress-value, .progressBarPositive::-moz-progress-bar {
     background: #000033;
 }
-.progressBarPositive::-moz-progress-bar {
-    background: #000033;
-}
-.progressBarNegative::-webkit-progress-value {
-    background: #880000;
-}
-.progressBarNegative::-moz-progress-bar {
+.progressBarNegative::-webkit-progress-value, .progressBarNegative::-moz-progress-bar {
     background: #880000;
 }
 

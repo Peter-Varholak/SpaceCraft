@@ -4,8 +4,16 @@
 		<type>combat</type>
 		<location>pirate</location>
 		<factions amount="2">
-			<faction id="1" value="-1" condition="kill">darksteel corsairs</faction>
-			<faction id="2" value="1" condition="kill">peacekeepers</faction>
+			<faction id="1">
+				<value>-1</value>
+				<condition>kill</condition>
+				<factionid>0</factionid>
+			</faction>
+			<faction id="2">
+				<value>1</value>
+				<condition>kill</condition>
+				<factionid>3</factionid>
+			</faction>
 		</factions>
 		<log>Pirate ship discovered</log>
 		<intromessage><i>Computer: </i>Captain, our radars spotted an enemy pirate ship, what are your orders?</intromessage>
@@ -31,7 +39,11 @@
 		<type>combat</type>
 		<location>pirate</location>
 		<factions amount="1">
-			<faction id="1" value="-1" condition="kill">order</faction>
+			<faction id="1">
+				<value>-1</value>
+				<condition>kill</condition>
+				<factionid>1</factionid>
+			</faction>
 		</factions>
 		<log>Automated drone discovered.</log>
 		<intromessage><i>Computer: </i>Captain, our radars spotted an automated drone, what are your orders?</intromessage>
