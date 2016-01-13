@@ -60,9 +60,7 @@ function setupGame()
         settings.shipName = $("#topButton").val();
     }
 
-    alert("before save");
     saveGame();
-    alert("after save")
     localStorage.setItem("spacecraftSave", true);
     startGame();
 }

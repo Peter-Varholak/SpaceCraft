@@ -120,9 +120,9 @@ function loadXMLs()
     //xmls.events1 = getXML("../xml/events1.xml");
     //xmls.locations = getXML("../xml/locations.xml");
     // LOCAL SCHOOL
-    xmls.gameInformation = getXML("file:///D:/Work/Html/SpaceCraft/xml/gameInformation.xml");
-    loadEvents();
-    xmls.locations = getXML("file:///D:/Work/Html/SpaceCraft/xml/locations.xml");
+    //xmls.gameInformation = getXML("file:///D:/Work/Html/SpaceCraft/xml/gameInformation.xml");
+    //loadEvents();
+    //xmls.locations = getXML("file:///D:/Work/Html/SpaceCraft/xml/locations.xml");
 
     function loadEvents()
     {
