@@ -78,14 +78,14 @@ function changeProgress(id, value)
 	{
 		if(factionProgress.factions[id] != -100)
 		{
-			addMessage("Reputation with " + gameInformation.find('faction[id="' + id + '"]').get(0).innerHTML + " decreased to " + factionProgress.factions[id] + ".");
+			addMessage("Reputation with " + xmls.gameInformation.find('faction[id="' + id + '"]').get(0).innerHTML + " decreased to " + factionProgress.factions[id] + ".");
 		}		
 	}
 	else
 	{
 		if(factionProgress.factions[id] != -100)
 		{
-			addMessage("Reputation with " + gameInformation.find('faction[id="' + id + '"]').get(0).innerHTML + " increased to " + factionProgress.factions[id] + ".");
+			addMessage("Reputation with " + xmls.gameInformation.find('faction[id="' + id + '"]').get(0).innerHTML + " increased to " + factionProgress.factions[id] + ".");
 		}
 	}
 
@@ -98,7 +98,7 @@ function unlockFaction(id)
 	{
 		factionProgress.factions[id] = 0;
 		$("#factionItem" + (id + parseInt(1))).removeClass("locked");
-		addMessage("You are now neutral with " + gameInformation.find('faction[id="' + id + '"]').get(0).innerHTML + ".");
+		addMessage("You are now neutral with " + xmls.gameInformation.find('faction[id="' + id + '"]').get(0).innerHTML + ".");
 	}
 }
 

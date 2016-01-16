@@ -3,7 +3,7 @@ function addMoney(money)
     playerStats.moneyAmount += parseInt(money);
     updatePlayerMoney();
 
-    addMessage("I gained " + money + " " + gameInformation.find('currencyname').get(0).innerHTML + (money == 1) ? "." : "s.");
+    addMessage("You gained " + money + " " + xmls.gameInformation.find('currencyname').get(0).innerHTML + ((money == 1) ? "." : "s."));
 }
 
 function removeMoney(money, reason)
@@ -14,7 +14,7 @@ function removeMoney(money, reason)
     {
         if(reason === "buy")
         {
-            addMessage("I can't afford that.");
+            addMessage("You can't afford that.");
             return false;
         }
         else
@@ -28,17 +28,17 @@ function removeMoney(money, reason)
 
     if(reason === "buy")
     {
-        addMessage("I spent " + money + " " + gameInformation.find('currencyname').get(0).innerHTML + (money == 1) ? "." : "s.");
+        addMessage("You spent " + money + " " + xmls.gameInformation.find('currencyname').get(0).innerHTML + ((money == 1) ? "." : "s."));
     }
     else
     {
         if(newAmount === 0)
         {
-            addMessage("I lost all my " + gameInformation.find('currencyname').get(0).innerHTML + "s.");
+            addMessage("You lost all your " + xmls.gameInformation.find('currencyname').get(0).innerHTML + "s.");
         }
         else
         {
-            addMessage("I lost " + money + " " + gameInformation.find('currencyname').get(0).innerHTML + (money == 1) ? "." : "s.");
+            addMessage("You lost " + money + " " + xmls.gameInformation.find('currencyname').get(0).innerHTML + ((money == 1) ? "." : "s."));
         }        
     }
 }
