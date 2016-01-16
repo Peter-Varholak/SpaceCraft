@@ -1,5 +1,6 @@
 var xmls = {
-    level1Events : null,
+    gameInformation: null,
+    events : [],
     locations : null
 }
 var settings = {
@@ -15,10 +16,6 @@ var stats = {
 
 var factionProgress = {
     factions : [101, 101, 101, 101, 101, 101]
-    // Darksteel Corsairs
-    // The Order
-    // The Council
-    // The Peacekeepers
 };
 var tutorial = {
     finished : false
@@ -119,29 +116,48 @@ function loadGame()
 function loadXMLs()
 {
     // WEB
-    xmls.level1Events = getXML("../xml/level1Events.xml");
-    xmls.locations = getXML("../xml/locations.xml");
-    // LOCAL
-    //xmls.level1Events = getXML("file:///D:/Work/Html/SpaceCraft/xml/level1Events.xml"); 
-    //xmls.locations = getXML("file:///D:/Work/Html/SpaceCraft/xml/locations.xml");
+    //xmls.gameInformation = getXML("../xml/gameInformation.xml");
+    //xmls.events1 = getXML("../xml/events1.xml");
+    //xmls.locations = getXML("../xml/locations.xml");
+    // LOCAL SCHOOL
+    xmls.gameInformation = getXML("file:///D:/Work/Html/SpaceCraft/xml/gameInformation.xml");
+    loadEvents();
+    xmls.locations = getXML("file:///D:/Work/Html/SpaceCraft/xml/locations.xml");
 
-    function getXML(name)
+    function loadEvents()
     {
-        var xmlHandler;
+        var amount = playerStats.level;
 
-        $.ajax({  
-            type: "GET",  
-            url: name,
-            dataType: "xml",
-            async: false,
-            success: function(xml){
-                xmlHandler = $(xml);
-            },
-            error: function(xhr, status, error) {
-                alert(xhr + " " + status + " " + error);
-            }
-        });
-
-        return xmlHandler;
+        for(i = 0; i <= amount; i++)
+        {
+            loadEvent(i);
+        }
     }
+}
+
+function getXML(name)
+{
+    var xmlHandler;
+
+    $.ajax({
+        type: "GET",
+        url: name,
+        dataType: "xml",
+        async: false,
+        success: function(xml){
+            xmlHandler = $(xml);
+        },
+        error: function(xhr, status, error) {
+            alert(xhr + " " + status + " " + error);
+        }
+    });
+
+    return xmlHandler;
+}
+
+
+
+function loadEvent(level)
+{
+    xmls.events.push(getXML("file:///D:/Work/Html/SpaceCraft/xml/events" + level + ".xml"));
 }

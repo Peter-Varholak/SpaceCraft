@@ -59,7 +59,7 @@ function setupGame()
     {
         settings.shipName = $("#topButton").val();
     }
-    
+
     saveGame();
     localStorage.setItem("spacecraftSave", true);
     startGame();

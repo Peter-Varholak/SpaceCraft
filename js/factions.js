@@ -1,3 +1,5 @@
+// REWORK SYSTEM!!!
+
 //Used for loading the game
 function loadFactions()
 {
@@ -27,13 +29,6 @@ function updateAllFactions()
 }
 
 //PUBLIC
-function getFactionName(id)
-{
-	var name = $("#factionName" + (id + parseInt(1))).html();
-	return name.replace(":", "");
-}
-
-//PUBLIC
 function resolveFactions(finish)
 {
 	var factionsTag;
@@ -41,7 +36,7 @@ function resolveFactions(finish)
 	var amount;
 	var value;
 	var condition;
-	var faction;
+	var factionId;
 
 	factionsTag = eventTag.find('factions');
 	amount = factionsTag.attr('amount');
@@ -49,44 +44,16 @@ function resolveFactions(finish)
 	for(i = 1; i <= amount; i++)
 	{
 		factionTag = factionsTag.find('faction[id="' + i + '"]');
-		condition = factionTag.attr('condition');
+		condition = factionTag.find('condition').get(0).innerHTML;
 
 		if(condition === finish)
 		{
-			value = factionTag.attr('value');	
-			faction = factionTag.get(0).innerHTML;
+			value = factionTag.find('value').get(0).innerHTML;
+			factionId = factionTag.find('factionid').get(0).innerHTML;
 
-			changeProgress(getfaction(faction), value);
+			changeProgress(factionId, value);
 		}		
 	}	
-}
-
-function getfaction(faction)
-{
-	if(faction === "darksteel corsairs")
-	{
-		return 0;
-	}
-	else if(faction === "order")
-	{
-		return 1;
-	}
-	else if(faction === "council")
-	{
-		return 2;
-	}
-	else if(faction === "peacekeepers")
-	{
-		return 3;
-	}
-	else if(faction === "test5")
-	{
-		return 4;
-	}
-	else if(faction === "test6")
-	{
-		return 5;
-	}
 }
 
 function changeProgress(id, value)
@@ -111,14 +78,14 @@ function changeProgress(id, value)
 	{
 		if(factionProgress.factions[id] != -100)
 		{
-			addMessage("Reputation with " + getFactionName(id) + " decreased to " + factionProgress.factions[id] + ".");
+			addMessage("Reputation with " + gameInformation.find('faction[id="' + id + '"]').get(0).innerHTML + " decreased to " + factionProgress.factions[id] + ".");
 		}		
 	}
 	else
 	{
 		if(factionProgress.factions[id] != -100)
 		{
-			addMessage("Reputation with " + getFactionName(id) + " increased to " + factionProgress.factions[id] + ".");
+			addMessage("Reputation with " + gameInformation.find('faction[id="' + id + '"]').get(0).innerHTML + " increased to " + factionProgress.factions[id] + ".");
 		}
 	}
 
@@ -131,7 +98,7 @@ function unlockFaction(id)
 	{
 		factionProgress.factions[id] = 0;
 		$("#factionItem" + (id + parseInt(1))).removeClass("locked");
-		addMessage("You are now neutral with " + getFactionName(id) + ".");
+		addMessage("You are now neutral with " + gameInformation.find('faction[id="' + id + '"]').get(0).innerHTML + ".");
 	}
 }
 

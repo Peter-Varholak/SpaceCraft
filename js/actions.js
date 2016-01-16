@@ -3,7 +3,7 @@ function addMoney(money)
     playerStats.moneyAmount += parseInt(money);
     updatePlayerMoney();
 
-    addMessage("I gained " + money + " money.");
+    addMessage("I gained " + money + " " + gameInformation.find('currencyname').get(0).innerHTML + (money == 1) ? "." : "s.");
 }
 
 function removeMoney(money, reason)
@@ -28,17 +28,17 @@ function removeMoney(money, reason)
 
     if(reason === "buy")
     {
-        addMessage("I spent " + money + " money.");
+        addMessage("I spent " + money + " " + gameInformation.find('currencyname').get(0).innerHTML + (money == 1) ? "." : "s.");
     }
     else
     {
         if(newAmount === 0)
         {
-            addMessage("I lost all of money.");
+            addMessage("I lost all my " + gameInformation.find('currencyname').get(0).innerHTML + "s.");
         }
         else
         {
-            addMessage("I lost " + money + " money.");
+            addMessage("I lost " + money + " " + gameInformation.find('currencyname').get(0).innerHTML + (money == 1) ? "." : "s.");
         }        
     }
 }
@@ -65,7 +65,7 @@ function updatePlayerFame()
 
 function updatePlayerMoney()
 {
-    $("#playerGoldValue").html(playerStats.moneyAmount);
+    $("#playerMoneyValue").html(playerStats.moneyAmount);
 }
 
 function updatePlayer()

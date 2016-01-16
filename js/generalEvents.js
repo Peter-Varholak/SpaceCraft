@@ -4,26 +4,11 @@ function findEvent(level)
 {
 	//TODO: event countdown
 
-	var xml = getXmlFromLevel(level);
+	var xml = xmls.events[level];
 
 	eventTag = getRandomEvent(xml);
 
 	eventIntro();	
-}
-
-function getXmlFromLevel(level)
-{
-	switch(level)
-	{
-		case 1:
-		{
-			return xmls.level1Events;
-		}
-		default:
-		{
-			alert("BUG: Level not found");
-		}
-	}
 }
 
 function getRandomEvent(xml)
