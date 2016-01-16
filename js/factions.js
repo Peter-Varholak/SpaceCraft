@@ -1,4 +1,6 @@
 // REWORK SYSTEM!!!
+//automatic generation of faction item
+//change to list
 
 //Used for loading the game
 function loadFactions()

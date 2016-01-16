@@ -39,10 +39,16 @@
     background: #e3e3e3;
 }
 
-.progressBarPositive::-webkit-progress-value, .progressBarPositive::-moz-progress-bar {
+.progressBarPositive::-webkit-progress-value {
     background: #000033;
 }
-.progressBarNegative::-webkit-progress-value, .progressBarNegative::-moz-progress-bar {
+.progressBarPositive::-moz-progress-bar {
+    background: #000033;
+}
+.progressBarNegative::-webkit-progress-value {
+    background: #880000;
+}
+.progressBarNegative::-moz-progress-bar {
     background: #880000;
 }
 
