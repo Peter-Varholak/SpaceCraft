@@ -1,0 +1,103 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>SpaceCraft</title>
+	<meta charset="UTF-8">
+	<link rel="icon" type="image/png" href="img/pageIcon.png" sizes="16x16"/>
+	<link rel="stylesheet" type="text/css" href="css/info.css">
+</head>
+<body>
+	<div id="infoWrapper">
+		<h1 id="header">Info</h1>
+		<div class="infoblock" id="about">
+			<h2>About</h2>
+			<div class="textblock">
+				<p>Hello and welcome, you managed to stumble upon <span class="highlight">SpaceCraft the Wonderful Adventure Through Space</span>. This is a direct implementation of <span class="highlight">StoryCraft</span> engine a tool used for generating branching, game-like stories.</p>
+				<p>Feel free to look around. The site will be updated as new features are added to the engine. Hopefully you will have a great time.</p>
+			</div>
+		</div>
+		<div class="infoblock" id="contact">
+			<h2>Contact me</h2>
+			<div class="textblock">
+				<p>If you want to contact me because you think you found a bug or you want to suggest a feature feel free to do so by using the following form:</p>
+				<form id="contactForm" action="MAILTO:peter.varholak@akademiasovy.sk" method="post" enctype="text/plain">
+					Name:<br>
+					<input type="text" id="name"> (optional)<br>
+					E-mail:<br>
+					<input type="email" id="mail"> (optional)<br>
+					Message:<br>
+					<textarea rows="4" cols="50" id="mail"></textarea><br><br>
+					<input type="submit" value="Send" id="submitButton">
+				</form>
+			</div>			
+		</div>
+		<div class="infoblock" id="comingSoon">
+			<h2>Upcoming</h2>
+			<div class="textblock">
+				<p>There are many things still to come. The ones that are currently worked on are:</p>
+			</div>
+			<ul id="upcoming">
+				<li>General:
+					<ul>
+						<li>Fix scaling GUI elements</li>
+						<li>Remake music and sound system</li>
+						<li>Graphic overhaul</li>
+						<li>Add tutorial</li>
+						<li>Change button system</li>
+						<li>Add states</li>
+					</ul>
+				</li>
+				<li>Exploration:
+					<ul>
+						<li>Put event find on timer</li>
+						<li>Add functionality to combat buttons</li>
+						<li>Add more event types</li>
+					</ul>
+				</li>
+				<li>Places:
+					<ul>
+						<li>Make places functional</li>
+					</ul>
+				</li>
+				<li>Datalog:
+					<ul>
+						<li>Add tabs for datalog</li>
+					</ul>
+				</li>
+				<li>Inventory:
+					<ul>
+						<li>Create inventory system</li>
+					</ul>
+				</li>
+				<li>Income:
+					<ul>
+						<li>Implement income system</li>
+					</ul>
+				</li>
+				<li>Science:
+					<ul>
+						<li>Implement science system</li>
+					</ul>
+				</li>
+				<li>Biolab:
+					<ul>
+						<li>Implement biolab system</li>
+					</ul>
+				</li>
+				<li>Ship:
+					<ul>
+						<li>Add ship info</li>
+					</ul>
+				</li>
+				<li>Crew:
+					<ul>
+						<li>Add crew info</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<h1 id="back" onClick="history.go(-1)">Back</h1>
+	<h2 id="version">Version: 0.1a<h2>
+</body>
+</html>

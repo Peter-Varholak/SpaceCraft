@@ -44,10 +44,15 @@
     transition: color 2s ease-in-out, background 1.5s ease-in-out;
 }
 
+#uiButtons a {
+    outline: 0;
+}
+
 .uiButton {
     right: 0;
     bottom: 0;
     height: 80%;
     width: 20%;
     text-align: center;
+    cursor: pointer;
 }

@@ -1,0 +1,66 @@
+body {
+    background: black;
+    color: white;
+    cursor: default;
+}
+
+h1 {
+  	font-family: "Times New Roman", Georgia, Serif;  	
+  	font-size: 35px; 
+    font-size: 2.5vw;
+  	font-weight: bold;
+}
+
+h1 {
+  	font-family: "Times New Roman", Georgia, Serif;  	
+  	font-size: 28px; 
+    font-size: 2vw;
+  	font-weight: bold;
+}
+
+ul {
+    list-style-image: url('../img/infoBullet.png');
+}
+
+#infoWrapper {
+	position: relative;
+	margin: 2% 0 10% 5%;
+	width: 40%;
+}
+
+.infoblock {
+	margin: 1% 0 0 4%;
+}
+
+.textblock {
+	padding-left: 5%;
+}
+
+.highlight {
+	font-size: 19px; 
+    font-size: 1vw;
+  	font-weight: bold;
+}
+
+#upcoming {
+	padding-left: 10%;
+	font-size: 19px; 
+    font-size: 1vw;
+}
+
+#back {
+	position: fixed;
+	top: 2%;
+	right: 4%;
+	cursor: pointer;
+}
+
+#version {
+	position: fixed;
+	bottom: 2%;
+	right: 3%;
+}
+
+#submitButton {
+	cursor: pointer;
+}

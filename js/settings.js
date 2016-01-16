@@ -74,5 +74,5 @@ function checkTime(i)
 
 function displayInfo()
 {
-    alert("It's me!");
+    alert("Oh hai!");
 }
