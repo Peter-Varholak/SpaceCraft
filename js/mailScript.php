@@ -2,7 +2,7 @@
  
 {
  
-
+require_once "recaptchalib.php";
 
     // EDIT THE 2 LINES BELOW AS REQUIRED
  
@@ -30,13 +30,17 @@
     }
  
      // CAPTCHA BLOCK
-
-    $url = 'https://www.google.com/recaptcha/api/siteverify';
     $secretKey = '6LdGjxUTAAAAAEMoPILJtfzM2gOZ1FkIR8tlRnzN';
-    $response = file_get_contents($url."?secret=".$secretKey."&response=".$_POST['g-recaptcha-response']."&remoteip=".$_SERVER['REMOTE_ADDR']);
-    $data = json_decode($response);
+    $response = null;
+    $reCaptcha = new ReCaptcha($secretKey);
+    if ($_POST["g-recaptcha-response"]) {
+        $response = $reCaptcha->verifyResponse(
+            $_SERVER["REMOTE_ADDR"],
+            $_POST["g-recaptcha-response"]
+        );
+    }
 
-    if(isset($data->success) AND $data->success==true)
+    if($response != null)
     {
  
         // validation expected data exists
@@ -123,6 +127,7 @@
 }
 else
 {
+
     died("You didn't pass the CAPTCHA test.");
 }
 ?>
