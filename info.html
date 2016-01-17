@@ -20,13 +20,13 @@
 			<h2>Contact me</h2>
 			<div class="textblock">
 				<p>If you want to contact me because you think you found a bug or you want to suggest a feature feel free to do so by using the following form:</p>
-				<form id="contactForm" action="MAILTO:peter.varholak@akademiasovy.sk" method="post" enctype="text/plain">
+				<form id="contactForm" method="post" action="js/mailScript.php">
 					Name:<br>
-					<input type="text" id="name"> (optional)<br>
+					<input type="text" name="name" id="name"><br>
 					E-mail:<br>
-					<input type="email" id="mail"> (optional)<br>
+					<input type="email" name="mail" id="mail"> (optional)<br>
 					Message:<br>
-					<textarea rows="4" cols="50" id="mail"></textarea><br><br>
+					<textarea rows="4" cols="50" name="message" id="message"></textarea><br><br>
 					<input type="submit" value="Send" id="submitButton">
 				</form>
 			</div>			
