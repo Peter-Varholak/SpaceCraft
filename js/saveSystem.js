@@ -117,7 +117,7 @@ function loadXMLs()
 {
     // WEB
     //xmls.gameInformation = getXML("../xml/gameInformation.xml");
-    //////xmls.events1 = getXML("../xml/events1.xml");
+    //loadEvents();
     //xmls.locations = getXML("../xml/locations.xml");
     // LOCAL SCHOOL
     xmls.gameInformation = getXML("file:///D:/Work/Html/SpaceCraft/xml/gameInformation.xml");
@@ -159,5 +159,6 @@ function getXML(name)
 
 function loadEvent(level)
 {
+    //xmls.events.push(getXML("../xml/events" + level + ".xml"));
     xmls.events.push(getXML("file:///D:/Work/Html/SpaceCraft/xml/events" + level + ".xml"));
 }
