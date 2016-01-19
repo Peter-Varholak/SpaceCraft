@@ -1,0 +1,14 @@
+table {
+	border-collapse: collapse;
+	text-align: center;
+	width: 20%;
+	height: 50%;
+}
+
+table, th, td, tr {
+    border: 3px solid black;
+}
+
+#playerInventory {
+	margin: 5%;
+}
