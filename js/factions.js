@@ -53,7 +53,7 @@ function resolveFactions(finish)
 			value = factionTag.find('value').get(0).innerHTML;
 			factionId = factionTag.find('factionid').get(0).innerHTML;
 
-			changeProgress(factionId, value);
+			changeProgress(parseInt(factionId), value);
 		}		
 	}	
 }
