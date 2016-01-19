@@ -51,7 +51,7 @@
 		<negotiation1><i>Computer: </i>Captain, you can't negotiate with a drone.</negotiation1>
 		<negotiation2><i>Computer: </i>Captain, we appreciate your pacifism but this drone won't listen to your reasoning.</negotiation2>
 		<negotiation3><i>Computer: </i>Captain, you were talking to a drone for 2 hours already, maybe it's time to try a different tactic.</negotiation3>
-		<diplomacyoutromessage><i>Drone: </i>Beep boop, life form evaluated as primitive, continue patrol sequence ALPHA.<br/><i>Computer: </i>>Well, I am not sure how you managed that but you talked a drone into leaving us alone Captain.</diplomacyoutromessage>
+		<diplomacyoutromessage><i>Drone: </i>Beep boop, life form evaluated as primitive, continue patrol sequence ALPHA.<br/><i>Computer: </i>Well, I am not sure how you managed that but you talked a drone into leaving us alone Captain.</diplomacyoutromessage>
 		<killoutromessage>We managed to salvage some resources from the drone.</killoutromessage>
 		<escapeoutromessage><i>Computer: </i>Seems he didn't notice us Captain.</escapeoutromessage>
 		<escapefailoutromessage><i>Drone: </i>Alert, alert, unknown ship in proximity.</escapefailoutromessage>
